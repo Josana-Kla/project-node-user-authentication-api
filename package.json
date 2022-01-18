@@ -1,0 +1,19 @@
+{
+  "name": "ms-authentication",
+  "version": "1.0.0",
+  "description": "Microservice created during the Digital Innovation One live",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./",
+    "build": "tsc -p ."
+  },
+  "keywords": [
+    "nodejs",
+    "microsservice",
+    "api",
+    "authentication"
+  ],
+  "author": "Josana-Kla",
+  "license": "ISC"
+}
