@@ -15,5 +15,11 @@
     "authentication"
   ],
   "author": "Josana-Kla",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
 }
