@@ -4,7 +4,7 @@
 // put / users / :uuid - Change a user
 //delete / users / :uuid - Delete a user
 
-import { Request, Response, NextFunction, Router } from "express";
+import { Request, Response, NextFunction, Router, request } from "express";
 import { StatusCodes } from 'http-status-codes';
 import userRepository from "../repositories/user.repository";
 
@@ -43,7 +43,9 @@ usersRoute.put('users/:uuid', async (req: Request <{ uuid: string }>, res: Respo
 });
 
 // Delete a user
-usersRoute.delete('users/:uuid', (req: Request <{ uuid: string }>, res: Response, next: NextFunction) => {
+usersRoute.delete('users/:uuid', async (req: Request <{ uuid: string }>, res: Response, next: NextFunction) => {
+  const uuid = req.params.uuid;
+  await userRepository.remove(uuid);
   res.status(StatusCodes.OK);
 });
 
