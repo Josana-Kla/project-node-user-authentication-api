@@ -23,21 +23,21 @@ usersRoute.get('users/:uuid', async (req: Request <{ uuid: string }>, res: Respo
   res.status(StatusCodes.OK).send({ uuid });
 });
 
-
 // Create a user
-usersRoute.post('/users', (req: Request, res: Response, next: NextFunction) => {
+usersRoute.post('/users', async (req: Request, res: Response, next: NextFunction) => {
   const newUser = req.body;
-
-  console.log(req.body);
-
-  res.status(StatusCodes.CREATED).send(newUser);
+  const uuid = await userRepository.create(newUser);
+  res.status(StatusCodes.CREATED).send(uuid);
 });
 
 // Change a user
-usersRoute.put('users/:uuid', (req: Request <{ uuid: string }>, res: Response, next: NextFunction) => {
+usersRoute.put('users/:uuid', async (req: Request <{ uuid: string }>, res: Response, next: NextFunction) => {
   const uuid = req.params.uuid;
   const modifiedUser = req.body;
+
   modifiedUser.uuid = uuid;
+
+  await userRepository.update(modifiedUser);
 
   res.status(StatusCodes.OK).send({ modifiedUser });
 });
