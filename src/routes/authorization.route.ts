@@ -3,35 +3,41 @@ import JWT from 'jsonwebtoken';
 import { StatusCodes } from 'http-status-codes';
 import basicAuthenticationMiddleware from '../middlewares/basic-authentication.middleware';
 import ForbiddenError from '../models/errors/forbidden.error.model';
+import jwtAuthenticationMiddleware from '../middlewares/jwt-authentication.middleware';
 
 const authorizationRoute = Router();
 
+// If the request arrives here it is because it is already validated, so we only pass the status 200
+authorizationRoute.post('/token/validate', jwtAuthenticationMiddleware, (req: Request, res: Response, next: NextFunction) => {
+  res.sendStatus(StatusCodes.OK);
+})
+
 authorizationRoute.post('/token', basicAuthenticationMiddleware, async (req: Request, res: Response, next: NextFunction) => {
   try {
-    // JWT token information:
-    // "iss" - the domain of the application generating the token
-    // "sub" - is the subject of the token, but it is often used to store the user ID
-    // "aud" - defines who can use the token
-    // "exp" - token expiration date
-    // "nbf" - defines a date for which the token cannot be accepted before it
-    // "iat" - token creation date
-    // "jti" - token id
+      // JWT token information:
+      // "iss" - the domain of the application generating the token
+      // "sub" - is the subject of the token, but it is often used to store the user ID
+      // "aud" - defines who can use the token
+      // "exp" - token expiration date
+      // "nbf" - defines a date for which the token cannot be accepted before it
+      // "iat" - token creation date
+      // "jti" - token id
 
-    const user = req.user;
+      const user = req.user;
 
-    if(!user) {
-      throw new ForbiddenError('Uninformed user!');
-    }
-    const jwtPayload = { username: user.username };
-    const jwtOptions = { subject: user?.uuid };
-    const secretKey = 'my_secret_key';
+      if(!user) {
+        throw new ForbiddenError('Uninformed user!');
+      }
+      const jwtPayload = { username: user.username };
+      const jwtOptions = { subject: user?.uuid };
+      const secretKey = 'my_secret_key';
 
-    const jwt = JWT.sign(jwtPayload, secretKey, jwtOptions);
+      const jwt = JWT.sign(jwtPayload, secretKey, jwtOptions);
 
-    // to return a jwt token based on the user we took earlier in basic-authentication.middleware
-    res.status(StatusCodes.OK).json({ token: jwt })
+      // To return a jwt token based on the user we took earlier in basic-authentication.middleware
+      res.status(StatusCodes.OK).json({ token: jwt })
   } catch (error) {
-    next(error);
+      next(error);
   }
 });
 
