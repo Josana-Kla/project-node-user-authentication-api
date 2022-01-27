@@ -1,4 +1,4 @@
-import { DatabaseError } from "../models/errors/database.error.model";
+import DatabaseError from "../models/errors/database.error.model";
 import db from "../db";
 import User from "../models/user.model";
 
