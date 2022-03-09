@@ -1,5 +1,7 @@
 <h1 align="center"> User Authentication Microservice </h1> 
 
+![Badge em Aprimoramento](https://img.shields.io/badge/STATUS-APRIMORANDO-yellow)
+
 This project was created to build a REST API with Node.JS + Express, using the postgress database.
 
 In the project, an authentication microservice (MS) was created for the management of new user registrations and the authentication of this user on the platform. For this, we had two forms of authentication:
