@@ -1,6 +1,12 @@
 <h1 align="center"> User Authentication Microservice </h1> 
 
-![Badge em Aprimoramento](https://img.shields.io/badge/STATUS-APRIMORANDO-yellow)
+<p align="center">
+  <!-- <a href="https://www.npmjs.com/package/@docusaurus/core"><img src="https://img.shields.io/npm/v/@docusaurus/core.svg?style=flat" alt="npm version"></a> -->
+  <a href="//www.linkedin.com/in/josana/"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="LinkedIn"></a> 
+ </p>
+ <p align="center">
+  <img src="https://img.shields.io/badge/STATUS-IMPROVING-yellow">
+</p> 
 
 This project was created to build a REST API with Node.JS + Express, using the postgress database.
 
