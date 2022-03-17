@@ -2,8 +2,9 @@
 <h1 align="center"> User Authentication Microservice </h1> 
 
 <p align="center">
-  <!-- <a href="https://www.npmjs.com/package/@docusaurus/core"><img src="https://img.shields.io/npm/v/@docusaurus/core.svg?style=flat" alt="npm version"></a> -->
-  <a href="//www.linkedin.com/in/josana/"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="LinkedIn"></a> 
+  <img src="https://img.shields.io/static/v1?label=node&message=v16.13.2&color=orange" alt="node version">
+  <img src="https://img.shields.io/static/v1?label=npm%20version&message=8.1.2&color=orange" alt="npm version">
+  <a href="//www.linkedin.com/in/josana/"><img src="https://img.shields.io/badge/LINKEDIN-blue" alt="LinkedIn"></a> 
  </p>
  <p align="center">
   <img src="https://img.shields.io/badge/STATUS-IMPROVING-yellow">
