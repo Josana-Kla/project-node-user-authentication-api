@@ -43,6 +43,24 @@ In the project, an authentication microservice (MS) was created for the manageme
 
 ## <a name=“getting-start”>📁Getting start<a/> 
   
+Getting start the User Authentication Microservice project in your local dev environment is very easy. You just need to be sure you have [Git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/) installed, then follow the directions below.
+
+1. Clone the source code
+
+ `git clone https://github.com/Josana-Kla/project-node-user-authentication-api.git`
+
+2. Install development dependencies
+
+ `npm install`
+
+3. Run a local development server
+
+ `npm start`
+
+It's done! The User Authentication Microservice project is now running!
+
+🔸 You can also access the project's source code [here](https://github.com/Josana-Kla/project-node-user-authentication-api).  
+
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 ## <a name=“project-features”>🔨Project features<a/> 
