@@ -101,19 +101,28 @@ Client applications request the list of products, sending the token previously r
 ## <a name=“technologies-used”>✔Technologies used<a/> 
 
 ### The technologies mentioned below were used for the development of the project:
-- ``Node.JS``
-- ``Typescript``
-- ``Express.JS``
-- ``PostgreSQL``
-- ``Postman``
-- ``Git``
-- ``Visual Studio Code IDE`` 
+- [Node.JS](https://nodejs.org/en/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Express.JS](https://expressjs.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Postman](https://www.postman.com/)
+- [Git](https://git-scm.com/)
+- [Visual Studio Code IDE](https://code.visualstudio.com/)
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 ## <a name=“developed-by”>👩‍💻Developed by<a/> 
 
-[<img src="https://avatars.githubusercontent.com/u/73187817?s=400&u=343a33ac5cbd16538d7c39b20e42764dfcf1c7e0&v=4" width=115><br><sub>Josana Klagenberg</sub>](https://github.com/Josana-Kla/)
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Josana-Kla/">
+        <img src="https://avatars.githubusercontent.com/u/73187817?s=400&u=343a33ac5cbd16538d7c39b20e42764dfcf1c7e0&v=4" title="Josana Klagenberg" alt="Desenvolvido por Josana Klagenberg" width=115><br/>
+        <sub><b>Josana Klagenberg</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
