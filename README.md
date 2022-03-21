@@ -32,7 +32,7 @@
 ## <a name=“project-description”>🧾Project description<a/> 
   
 <p align="justify">
-In this project was created a REST API with Node.JS + Express, using the postgress database.
+In this project was created a REST API with Node.JS + Express, using postgress database.
 
 In the project, an authentication microservice (MS) was created for the management of new user registrations and the authentication of this user on the platform. For this, we had two forms of authentication:
 - *Base-authentication*: which is the simplest form of authentication and that the HTTP protocol itself specifies;
@@ -68,7 +68,7 @@ It's done! The User Authentication Microservice project is now running!
 ### To login to the system, the application works like this:
 </br>
 <p align="center">
-<img src= "/public/assets/img/authentication-ms.png"/>
+<img src= "/public/assets/img/authentication-ms.png"/ title="how the application works to enter the system" alt="the image shows a request to login to the system being made through a user's cell phone. This request reaches the authentication microservice that will validate if the information is correct and then, generate a jwt authentication token that will return to the user and allow him to login to the system">
 </p>
 Client applications (browser, client cell phone and others) request login to the system and then the Node.JS Authentication Microservice validates if the login information is ok. And if everything is ok, it returns a JWT authentication token and then the client is authenticated to the system.
 
@@ -77,7 +77,7 @@ Client applications (browser, client cell phone and others) request login to the
 ### For ordering products, the application works like this:
 </br>
 <p align="center">
-<img src= "/public/assets/img/product-ms.png"/>
+<img src= "/public/assets/img/product-ms.png"/ title="how the application works to order products" alt="the image shows a request to login to the system being made through a user's cell phone. This request reaches the products microservice, which will ask the authentication microservice if the token is valid. If the authentication microservice validates the token, it will return this response to the products microservice, which will return the list of products requested by the user">
 </p>
 Client applications request the list of products, sending the token previously received at login, to the Product Microservice. Then this product MS asks the authentication MS if the token is valid, and if it is valid, the Product MS responds to the request with the list of products.
 
